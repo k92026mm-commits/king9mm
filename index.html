@@ -50,8 +50,16 @@
             border: 2px solid gold;
             margin-bottom: 15px;
             object-fit: cover;
+            /* Animation ထည့်သွင်းခြင်း */
+            animation: bounce 2s infinite ease-in-out;
         }
 
+        /* လှုပ်ရှားမှု ပုံစံ သတ်မှတ်ခြင်း */
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
         /* KingNineMM ဖောင့်စတိုင် ပြင်ဆင်ထားသည့်အပိုင်း */
         h1 { 
             font-family: 'Kanit', sans-serif; 
