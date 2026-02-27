@@ -26,21 +26,23 @@
     position: fixed;
     top: 50%;
     left: 50%;
-    width: 100vw;    /* Screen အကျယ်အတိုင်း */
-    height: 100vh;   /* Screen အမြင့်အတိုင်း */
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
     z-index: -1;
-    transform: translate(-50%, -50%);
-    object-fit: contain; /* ဗီဒီယို တစ်ခုလုံးကို screen ထဲဝင်အောင် ကျဉ်းပေးမည် */
-    background-color: black; /* ဗီဒီယိုနဲ့ မလွတ်တဲ့နေရာကို အမည်းရောင်ထားရန် */
+    transform: translate(-50%, -50%); /* ဗီဒီယိုကို အလယ်ဗဟိုမှာ အမြဲရှိနေစေရန် */
+    object-fit: cover;
+    object-position: center; /* Logo ရှိတဲ့ အလယ်အပိုင်းကို ဦးစားပေးပြရန် */
 }
 
-/* ဖုန်းဆိုဒ်အတွက်ဆိုရင်တော့ အပြည့်ပြန်ပြရန် */
-@media (max-width: 768px) {
+/* ကွန်ပျူတာ screen အကြီးတွေအတွက် အထူးပြင်ဆင်ချက် */
+@media (min-aspect-ratio: 16/9) {
     #bg-video {
-        object-fit: cover;
+        width: 100%;
+        height: auto;
     }
 }
-
         .container {
             width: 120%;
             max-width: 450px;
