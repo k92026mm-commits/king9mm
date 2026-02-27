@@ -22,7 +22,7 @@
             overflow-x: hidden;
         }
 
-        #bg-video {
+       #bg-video {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -33,6 +33,15 @@
     z-index: -1;
     transform: translate(-50%, -50%); /* ဗီဒီယိုကို အလယ်ဗဟိုမှာ အမြဲရှိနေစေရန် */
     object-fit: cover;
+    object-position: center; /* Logo ရှိတဲ့ အလယ်အပိုင်းကို ဦးစားပေးပြရန် */
+}
+
+/* ကွန်ပျူတာ screen အကြီးတွေအတွက် အထူးပြင်ဆင်ချက် */
+@media (min-aspect-ratio: 16/9) {
+    #bg-video {
+        width: 100%;
+        height: auto;
+    }
 }
 
         .container {
